@@ -1,0 +1,434 @@
+:root {
+    --primary-background: #EBF5FC;
+    --primary-text: #555;
+    --secondary-text: #EBF5FC;
+    --light-blue: #5CA9FC;
+    --dark-blue: #3F658E;
+    --light-green: #41c501;
+    --dark-green: #2a7903;
+    --light-purple: #A955FF;
+    --dark-purple: #EA51FF;
+    --light-yellow: #ffd200;
+    --dark-yellow: #ffae00; 
+  }
+
+body, html {
+    color: #555;
+    font-family: 'Source Sans Pro', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #EBF5FC;
+}
+
+/* Color Classes for recuring sections */
+.about-me {
+    background: linear-gradient(45deg, var(--light-blue), var(--dark-blue));
+}
+
+.contact {
+    background: linear-gradient(45deg, var(--light-purple), var(--dark-purple));
+}
+
+.projects {
+    background: linear-gradient(45deg, var(--light-green), var(--dark-green));
+}
+
+.experience {
+    background: linear-gradient(45deg, var(--light-yellow), var(--dark-yellow));
+}
+
+
+
+/* ----- NAVBAR ----- */
+
+#navbar {
+    width:100%;
+    height: 100px;
+}
+
+#navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    color: var(--primary-background);
+    
+}
+
+#navbar li {
+    display: inline; 
+    float: right; 
+}
+
+#navbar a {
+    text-decoration: none;
+    color: var(--secondary-text);
+    display: block;
+    width: 100px;
+    padding: 16px;
+    margin: 16px;
+    border-radius: 16px;
+    text-align: center;
+}
+
+#navbar #nav-contact-button a  {
+    background: linear-gradient(45deg, var(--light-purple), var(--dark-purple));
+}
+
+#navbar #nav-about-me-button a  {
+    background: linear-gradient(45deg, var(--light-blue), var(--dark-blue));
+}
+
+#navbar a:hover {
+    opacity: 0.5;
+}
+
+#navbar ul li a img {
+    position: relative;
+    display: block;
+    padding: -16px;
+    margin: -16px;
+    width:50px;
+}
+
+/* ----- LANDING PAGE ----- */
+#intro {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+}
+
+#intro #intro-container {
+    display: inline-block;
+}
+
+/* Typewriter Effect */
+.typewriter {
+    font-size: 2em;
+    letter-spacing: 2.5px;
+    border-right: 5px solid;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    color: var(--i);
+    animation: typing-effect 2s steps(18), cursor .4s step-end infinite alternate;
+}
+
+.typewriter h3 {
+    color: var(--i);
+}
+
+#profile-img img {
+    width:300px;
+    height: 300px;
+}
+
+
+/* Landing Page: MENU */
+
+#intro-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+#intro-menu a {
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 60px;
+    cursor: pointer;
+    padding: 15px 30px;
+    background: var(--primary-background);
+    color: var(--primary-text);
+    text-align: center;
+    transition: 0.5s ease-in-out;
+    box-shadow: -6px -6px 14px rgba(255, 255, 255, .7),
+    -6px -6px 10px rgba(255, 255, 255, .5),
+    6px 6px 8px rgba(255, 255, 255, .075),
+    6px 6px 10px rgba(0, 0, 0, .15);
+}
+
+#intro-menu a:hover {
+    width: 150px;
+    height: 60px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0);
+    transition: 1s;
+    background: linear-gradient(45deg, var(--color1),var(--color2));
+}
+
+
+#intro-menu a span {
+    position: absolute;
+}
+
+#intro-menu a #title {
+    display: inline;
+    color: var(--secondary-text);
+    font-size: 1.1em;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    letter-spacing: scale(0);
+    transition: 1s;
+    transition-delay: 0s;
+    opacity: 0;
+}
+
+#intro-menu a:hover #title {
+    transition-delay: 0s;
+    opacity: 1;
+}
+
+#intro-menu a img {
+    width: 60px;
+    height: 60px;
+}
+
+#intro-menu a:hover img {
+    display: none;
+    transition: 0.5s;
+}
+
+
+/* ABOUT ME */
+#about-me {
+    padding: 50px;
+    text-align: center;
+    margin: 50px;
+    border-radius: 50px;
+    box-shadow:  -20px 20px 60px #c8d0d6,
+             20px -20px 60px #ffffff;
+}
+
+
+/* INFO CARDS */
+#info-cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#info-cards #info-card-container {
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    flex-wrap: wrap;
+    padding: 40px 0px;
+}
+
+#info-cards #info-card-container #card {
+    position: relative;
+    width: 320px;
+    height:440px;
+    box-shadow: inset 5px 5px 5px rgba(0,0,0,0.05),
+                inset -5px -5px 5px rgba(255,255,255,0.5),
+                5px 5px 5px rgba(0,0,0,0.05),
+                -5px -5px 5px rgba(255,255,255,0.5);
+    border-radius: 15px;
+    margin: 30px;
+}
+
+#info-cards #info-card-container #card #box {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    border-radius: 15px;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+}
+
+#info-cards #info-card-container #card:hover #box {
+    transform: translateY(-50px);
+    box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+    background: linear-gradient(45deg, var(--color1), var(--color2));
+}
+
+#info-cards #info-card-container #card:hover #box #content {
+    padding: 20px;
+    text-align: center;
+}
+
+#info-cards #info-card-container #card:hover #box #content h3 {
+    color: var(--secondary-text);
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+#info-cards #info-card-container #card #box #content p {
+    font-size: 1em;
+    font-weight: 300;
+    color: var(--primary-text);
+    z-index: 1; 
+    transition: 0.5s;
+}
+
+#info-cards #info-card-container #card:hover #box #content p {
+    color: var(--secondary-text);
+}
+
+#info-cards #info-card-container #card:hover #box #content a {
+    position: relative;
+    display: inline-block;
+    padding: 8px 20px;
+    background:var(--light-blue);
+    margin-top: 15px;
+    border-radius: 20px;
+    color: var(--secondary-text);
+    text-decoration: none;
+    font-weight: 400;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.02);
+}
+
+#info-cards #info-card-container #card:hover #box #content a:hover {
+    background: var(--dark-blue);
+}
+
+#info-cards #info-card-container #card #box #content #face {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index:1;
+}
+
+#info-cards #info-card-container #card:hover #box #content #face {
+    display: none;
+}
+
+#info-cards #info-card-container #card #box #content #face img {
+    width: 50%;
+}
+
+#info-cards #info-card-container #card #box #content #face2 {
+    display: none;
+}
+
+
+#info-cards #info-card-container #card:hover #box #content #face2 {
+    transition: 0.5s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#info-cards #info-card-container #card:hover #box #content #face2 h3 {
+    padding-top: 15px;
+    transition: 0.5s;
+    color: var(--secondary-text);
+}
+
+#info-cards #info-card-container #card:hover #box #content #face2 img {
+    width: 50%;
+}
+
+
+/* Experience Section */
+#experience {
+    margin: 15px;
+    padding: 15px;
+    border-radius: 50px;
+    box-shadow: inset 20px 20px 60px #c8d0d6,
+            inset -20px -20px 60px #ffffff;
+    text-align: center;
+}
+
+#experience #experience-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#experience #experience-content #experience-card {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    background:var(--primary-background);
+    box-shadow:  -20px 20px 60px #c8d0d6,
+             20px -20px 60px #ffffff;
+    margin: 15px;
+    padding: 15px;
+    text-align: left;
+}
+
+#experience #experience-content #experience-card #experience-card-text {
+    padding: 25px;
+    margin: 25px;
+    width: 750px  
+}
+
+#experience #experience-content #experience-card img {
+    width: 150px;
+    height: 150px;
+}
+
+
+/* Skills and Education */
+#skillsEducation {
+    padding: 25px;
+    margin: 25px;
+    border-radius: 50px;
+    background: linear-gradient(225deg, #fbffff, #d4dde3);
+    box-shadow:  -28px 28px 55px #c8d0d6,
+             28px -28px 55px #ffffff;
+}
+
+
+/* Footer */
+#footer {
+    background: linear-gradient(45deg,var(--light-blue),var(--dark-blue));
+    padding: 25px;
+    text-align: center;
+    color: var(--secondary-text);
+}
+
+#footer #contact-details {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;  
+}
+
+#footer #contact-details a {
+    display: block;
+    padding: 15px;
+    margin: 15px;
+    background: linear-gradient(45deg,var(--light-blue),var(--dark-blue));
+    box-shadow:  -5px 5px 10px var(--dark-blue),
+             5px -5px 10px var(--light-blue);
+    width: 150px;
+    height: 150px;
+    border-radius: 50px;
+}
+
+#footer #contact-details a:hover {
+    opacity: 0.5;
+    cursor: pointer;   
+}
+
+#footer #contact-details a img {
+    position: relative;
+    width: 100%;
+}
+
+
+/* Blinking cursor for typewriter effect */
+@keyframes cursor {
+    50% { border-color: transparent;}
+}
+
+@keyframes typing-effect {
+    from {width: 0}
+}
